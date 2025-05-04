@@ -1,0 +1,44 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "allowJs": true,
+    "checkJs": true,
+    "moduleDetection": "force",
+    "esModuleInterop": true,
+    "strict": false, // Set this to false if you don't want strict type checking
+    "noUnusedLocals": false, // Disable checking for unused local variables
+    "noUnusedParameters": false, // Disable checking for unused parameters
+    "types": [
+      "svelte"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "include": [
+    "src",
+    "src/**/*.svelte"
+  ], // Include svelte files here
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
