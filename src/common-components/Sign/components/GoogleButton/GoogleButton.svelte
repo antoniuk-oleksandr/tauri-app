@@ -10,7 +10,7 @@
 
   const { googleButtonText, keepSignedIn }: GoogleButtonProps = $props()
 
-  const clientId = import.meta.env.VITE_GOOGLE_CLIENT_ID
+  const clientId = window.env.VITE_GOOGLE_CLIENT_ID
 
   let loading = $state(false)
   const setLoading = (value: boolean) => (loading = value)

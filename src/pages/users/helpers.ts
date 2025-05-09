@@ -23,7 +23,6 @@ export const getMoreReviewsByUserId = async (
         `/users/${prevUserData.user.id}/reviews?cursor=${prevUserData.reviewsCursor}`,
     );
     if (response.status != 200) {
-        //@ts-ignore
         errorStore.set({ shown: true, error: response.error });
     } else userByIdStore.update((prev) => {
         if (!prev || !prev.user.reviews) return prev;
@@ -50,7 +49,6 @@ export const getMoreServicesByUserId = async (
         `/users/${prevUserData.user.id}/services?cursor=${prevUserData.servicesCursor}`,
     );
     if (response.status != 200) {
-        //@ts-ignore
         errorStore.set({ shown: true, error: response.error });
     } else userByIdStore.update((prev) => {
         if (!prev || !prev.user.services) return prev;

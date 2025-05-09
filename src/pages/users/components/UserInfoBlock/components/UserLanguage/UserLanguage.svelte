@@ -1,6 +1,6 @@
 <script lang="ts">
     import {Link} from "svelte-routing";
-    import type {Language} from "@/types/Language";
+    import type {Language} from "@/types/Language.ts";
 
     type UserLanguageProps = {
         language: Language,

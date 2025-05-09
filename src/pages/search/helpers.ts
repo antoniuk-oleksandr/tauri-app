@@ -205,7 +205,6 @@ export const makeSearchRequest = (
             errorStore.set({ shown: true, error: response.data.error });
         }
 
-        //@ts-ignore
         setSearchRequestResponse(response);
     });
 }
