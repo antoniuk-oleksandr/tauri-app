@@ -41,6 +41,7 @@ export const handleSearchSelectChange = (
 ) => {
   if (!Array.isArray(value) || !searchPageParams) return;
 
+  //@ts-ignore
   value = value.map((item) => capitalize(item.replaceAll('By ', '')));
 
   searchPageParams.sort = convertStringToSortType(value[0]);
