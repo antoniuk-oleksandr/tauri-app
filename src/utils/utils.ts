@@ -2,17 +2,18 @@ import type { Category } from "@/types/Category";
 import { SvelteURLSearchParams } from "svelte/reactivity";
 
 export const getHost = () => {
-    return window.env.VITE_BACKEND_HOST    
-    // return 'http://localhost:8080';
+    //@ts-ignore
+    return window.env.VITE_BACKEND_HOST
 }
 
 export const getWSHost = () => {
+    //@ts-ignore
     return window.env.VITE_WEBSOCKET_HOST
 }
 
 export const getFileServerHost = () => {
+    //@ts-ignore
     return window.env.VITE_FILE_SERVER_HOST
-    // return 'http://localhost:8030/files';
 }
 
 export const getHoverClass = () => {
@@ -90,6 +91,7 @@ export const round = (value: number, precision: number) => {
 
 
 export const getServiceFees = () => {
+    //@ts-ignore
     return parseFloat(window.env.VITE_SERVICE_FEES as string);
 }
 

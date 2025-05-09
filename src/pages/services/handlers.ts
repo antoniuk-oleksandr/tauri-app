@@ -18,6 +18,7 @@ export const handleShowMoreFreelancesButtonClick = async (
         const response = await request<GetReviewsByServiceIdResponse>("GET", link);
 
         if (response.status !== 200) {
+            //@ts-ignore
             errorStore.set({shown: true, error: response.error});
             return undefined;
         }

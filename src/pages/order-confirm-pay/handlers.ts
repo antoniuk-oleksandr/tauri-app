@@ -165,6 +165,7 @@ const getPublicKey = async (): Promise<string> => {
 const processPayment = async (
     encryptedData: string
 ): Promise<PostPaymentRequestResponse> => {
+    //@ts-ignore
     return await request<PostPaymentRequestResponse>(
         "POST", "/payment/process-payment", { data: encryptedData }, true
     );

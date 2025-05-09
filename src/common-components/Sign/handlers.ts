@@ -93,6 +93,7 @@ export const handleGoogleButtonClick = async (
     keepSignedIn?: boolean
 ) => {
     setLoading(true);
+    //@ts-ignore
     google.accounts.oauth2.initCodeClient({
         client_id: clientId,
         scope: "email profile",

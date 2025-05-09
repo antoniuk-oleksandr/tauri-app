@@ -65,6 +65,7 @@ export const getMyProfileRequestsInitialSelectIndex = (value: number): number =>
   const tuple = Object.entries(StatusEnum).find(([_, val]) => val === value);
   const selectItems = getInitialRequestsStatusValues();
 
+  //@ts-ignore
   const index = selectItems.findIndex(({ title }) => title.replaceAll(/\s+/g, '') === tuple?.[0]);
   console.log(index);
   return index;
